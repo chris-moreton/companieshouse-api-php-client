@@ -7,11 +7,10 @@ use GuzzleHttp\Client as GuzzleClient;
  * Guzzle Client with our own defaults.
  *
  * Class Client
- * @package Opg\Lpa\Api\Client\Common\Guzzle
  */
 class Client extends GuzzleClient {
 
-    public function __construct(array $config = []){
+    public function __construct(array $config = []) {
 
         parent::__construct( $config );
 
@@ -24,20 +23,11 @@ class Client extends GuzzleClient {
     /**
      * Sets the token as a default header value for the client.
      *
-     * @param $token
+     * @param $apiKey
      */
-    public function setToken( $token ){
+    public function setApiKey( $apiKey ) {
 
-        $this->setDefaultOption( 'headers/Token', $token );
-
-    }
-
-    /**
-     * Clears the default header token.
-     */
-    public function clearToken(){
-
-        $this->setToken( null );
+        $this->setDefaultOption( 'auth', [$apiKey, ''] );
 
     }
 

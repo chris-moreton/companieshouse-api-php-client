@@ -1,7 +1,7 @@
 <?php
 namespace Netsensia\CompaniesHouse\Api\Client;
 
-use Opg\Lpa\Api\Client\Common\Guzzle\Client as GuzzleClient;
+use Netsensia\CompaniesHouse\Api\Client\Common\Guzzle\Client as GuzzleClient;
 
 use GuzzleHttp\Message\Response;
 
@@ -11,20 +11,19 @@ class Client
     /**
      * The base URI for the API
      */
-    private $apiBaseUri = 'https://apiv2';
-    
-    /**
-     * The API auth token
-     * 
-     * @var string
-     */
-    private $token;
+    private $apiBaseUri = 'https://api.companieshouse.gov.uk';
     
     /**
      * 
      * @var GuzzleClient
      */
     private $guzzleClient;
+    
+    /**
+     * 
+     * @var string
+     */
+    private $apiKey;
     
     /**
      * The status code from the last API call
@@ -46,59 +45,21 @@ class Client
      * @var boolean
      */
     private $isError;
-    
-    /**
-     * @return the $apiBaseUri
-     */
-    public function getApiBaseUri()
-    {
-        return $this->apiBaseUri;
-    }
-
-    /**
-     * @return the $authBaseUri
-     */
-    public function getAuthBaseUri()
-    {
-        return $this->authBaseUri;
-    }
-
-    /**
-     * @param field_type $apiBaseUri
-     */
-    public function setApiBaseUri($apiBaseUri)
-    {
-        $this->apiBaseUri = $apiBaseUri;
-    }
-
-    /**
-     * @param field_type $authBaseUri
-     */
-    public function setAuthBaseUri($authBaseUri)
-    {
-        $this->authBaseUri = $authBaseUri;
-    }
 
     /**
      * Create an API client for the given uri endpoint.
      * 
-     * Optionally pass in a previously-obtained token. If no token is provided,
-     * you will need to call the authenticate(...) function
-     * 
-     * @param string $token  The API auth token
+     * @param string $apiKey  The API key
      */
     public function __construct(
-        $token = null
+        $apiKey = null
     )
     {
-        $this->setToken($token);
-
+        $this->apiKey = $apiKey;
     }
 
     /**
      * Returns the GuzzleClient.
-     *
-     * If a authentication token is available it will be preset in the HTTP header.
      *
      * @return GuzzleClient
      */
@@ -109,9 +70,7 @@ class Client
             $this->guzzleClient = new GuzzleClient();
         }
 
-        if( $this->getToken() != null ){
-            $this->guzzleClient->setToken( $this->getToken() );
-        }
+        $this->guzzleClient->setApiKey( $this->apiKey );
 
         return $this->guzzleClient;
 
@@ -129,15 +88,15 @@ class Client
      */
     public function log(Response $response, $isSuccess=true)
     {
-        $this->setLastStatusCode($response->getStatusCode());
+        $this->lastStatusCode = $response->getStatusCode();
 
         $responseBody = (string)$response->getBody();
         $jsonDecoded = json_decode($responseBody, true);
 
         if (json_last_error() == JSON_ERROR_NONE) {
-            $this->setLastContent($jsonDecoded);
+            $this->lastContent = $jsonDecoded;
         } else {
-            $this->setLastContent($responseBody);
+            $this->lastContent = $responseBody;
         }
 
         // @todo - Log properly
@@ -147,5 +106,84 @@ class Client
         $this->setIsError(!$isSuccess);
 
         return $isSuccess;
+    }
+
+    /**
+     * @return the $isError
+     */
+    public function isError()
+    {
+        return $this->isError;
+    }
+
+    /**
+     * @param boolean $isError
+     */
+    public function setIsError($isError)
+    {
+        $this->isError = $isError;
+    }
+
+    /**
+     * @return the $apiKey
+     */
+    public function getApiKey()
+    {
+        return $this->apiKey;
+    }
+
+    /**
+     * @param string $apiKey
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+    }
+
+    /**
+     * @return the $lastStatusCode
+     */
+    public function getLastStatusCode()
+    {
+        return $this->lastStatusCode;
+    }
+
+    /**
+     * @param number $lastStatusCode
+     */
+    public function setLastStatusCode($lastStatusCode)
+    {
+        $this->lastStatusCode = $lastStatusCode;
+    }
+
+    /**
+     * @return the $lastContent
+     */
+    public function getLastContent()
+    {
+        return $this->lastContent;
+    }
+
+    /**
+     * @param string $lastContent
+     */
+    public function setLastContent($lastContent)
+    {
+        $this->lastContent = $lastContent;
+    }
+
+    public function getCompanyDetails($companyNumber)
+    {
+        $response = $this->client()->get($this->apiBaseUri . '/company/' . $companyNumber);
+        
+        if( $response->getStatusCode() != 200 ){
+            return $this->log($response, false);
+        }
+        
+        $jsonDecode = json_decode($response->getBody());
+        
+        $this->log($response, true);
+        
+        return $jsonDecode;
     }
 }
