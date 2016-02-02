@@ -77,37 +77,66 @@ class Client
     }
   
     /**
-     * Log the response of the API call and set some internal member vars
-     * If content body is JSON, convert it to an array
-     * 
-     * @param Response $response
-     * @param bool $isSuccess
-     * @return boolean
-     * 
-     * @todo - External logging
-     */
-    public function log(Response $response, $isSuccess=true)
+    * Company profile
+    * 
+    * https://developer.companieshouse.gov.uk/api/docs/company/company_number/company_number.html
+    * 
+    * @param $companyNumber The company number of the officer list being requested
+    *
+    * @return boolean|mixed
+    */
+    public function getCompanyProfile($companyNumber)
     {
-        $this->lastStatusCode = $response->getStatusCode();
-
-        $responseBody = (string)$response->getBody();
-        $jsonDecoded = json_decode($responseBody, true);
-
-        if (json_last_error() == JSON_ERROR_NONE) {
-            $this->lastContent = $jsonDecoded;
-        } else {
-            $this->lastContent = $responseBody;
+        $response = $this->client()->get($this->apiBaseUri . '/company/' . $companyNumber);
+    
+        if( $response->getStatusCode() != 200 ){
+            return $this->log($response, false);
         }
-
-        // @todo - Log properly
-        if (!$isSuccess) { 
-        }
-        
-        $this->setIsError(!$isSuccess);
-
-        return $isSuccess;
+    
+        $jsonDecode = json_decode($response->getBody());
+    
+        $this->log($response, true);
+    
+        return $jsonDecode;
     }
-
+    
+    /**
+     * List the company officers
+     * 
+     * https://developer.companieshouse.gov.uk/api/docs/company/company_number/officers/officerList.html
+     * 
+     * @param $companyNumber The company number of the officer list being requested
+     * @param $itemsPerPage Optional. The number of officers to return per page
+     * @param $startIndex Optional. The offset into the entire result set that this page starts. Optional.
+     * @param $orderBy
+     *        Optional 
+     *        The field by which to order the result set. Possible values are: appointed_on resigned_on surname.
+     *        Negating the order_by will reverse the order. For example, order_by=-surname will give results in descending order of surname.
+     *
+     * @return boolean|mixed
+     */
+    public function getOfficerList($companyNumber, $itemsPerPage = null, $startIndex = null, $orderBy = null)
+    {
+        $response = $this->client()->get($this->apiBaseUri . '/company/' . $companyNumber . '/officers', [
+            'query' => [
+                'items_per_page' => $itemsPerPage,
+                'start_index' => $startIndex,
+                'order_by' => $orderBy,
+            ],
+        ]);
+    
+        if( $response->getStatusCode() != 200 ){
+            return $this->log($response, false);
+        }
+    
+        $jsonDecode = json_decode($response->getBody());
+    
+        $this->log($response, true);
+    
+        return $jsonDecode;
+    }
+    
+    
     /**
      * @return the $isError
      */
@@ -172,18 +201,36 @@ class Client
         $this->lastContent = $lastContent;
     }
 
-    public function getCompanyDetails($companyNumber)
+    /**
+     * Log the response of the API call and set some internal member vars
+     * If content body is JSON, convert it to an array
+     *
+     * @param Response $response
+     * @param bool $isSuccess
+     * @return boolean
+     *
+     * @todo - External logging
+     */
+    public function log(Response $response, $isSuccess=true)
     {
-        $response = $this->client()->get($this->apiBaseUri . '/company/' . $companyNumber);
-        
-        if( $response->getStatusCode() != 200 ){
-            return $this->log($response, false);
+        $this->lastStatusCode = $response->getStatusCode();
+    
+        $responseBody = (string)$response->getBody();
+        $jsonDecoded = json_decode($responseBody, true);
+    
+        if (json_last_error() == JSON_ERROR_NONE) {
+            $this->lastContent = $jsonDecoded;
+        } else {
+            $this->lastContent = $responseBody;
         }
-        
-        $jsonDecode = json_decode($response->getBody());
-        
-        $this->log($response, true);
-        
-        return $jsonDecode;
+    
+        // @todo - Log properly
+        if (!$isSuccess) {
+        }
+    
+        $this->setIsError(!$isSuccess);
+    
+        return $isSuccess;
     }
+    
 }

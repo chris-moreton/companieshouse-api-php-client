@@ -6,9 +6,20 @@ Usage
 -----
 
     $client = new Client($apiKey);
-    $client->getCompanyDetails();
+    $profile = $client->getCompanyProfile($companyNumber);
+    $officerList = $client->getOfficerList($companyNumber);
 
-A full list of available calls can be found by examining the ClientSpec.php file which contains the spec tests.
+A full list of available calls can be found by examining the ClientSpec.php file which contains the spec tests, which are in a format such as:
+
+    function it_can_get_a_company_profile()
+    {
+        $this->beConstructedWith(getApiKey());
+        
+        $this->getCompanyProfile('06236637')
+            ->registered_office_address
+            ->address_line_1
+            ->shouldBe('57 London Road');
+    }
 
 Development
 -----------
