@@ -39,6 +39,6 @@ Development
 
 ### Run the tests
 
-Create a file called .apiKey and add your companies house api key to it.
+Create a file called .apiKey in the root of the project and add your companies house api key to it.
 
     bin/phpspec run --format=pretty -vvv --stop-on-failure
