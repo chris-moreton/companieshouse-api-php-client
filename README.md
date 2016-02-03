@@ -1,7 +1,14 @@
 # Companies House API PHP Client
 
 You will need an API key to use this client. To get an API key, go to https://developer.companieshouse.gov.uk/api/docs/index/gettingStarted/apikey_authorisation.html
- 
+
+Add to project using Composer
+-----------------------------
+
+    "require" : {
+      "netsensia/companieshouse-api-php-client" : "~0.1.0"
+    },
+    
 Usage
 -----
 
