@@ -1,0 +1,55 @@
+{
+  "annual_return": {
+    "last_made_up_to": "2016-01-22",
+    "overdue": false,
+    "next_made_up_to": "2017-01-22",
+    "next_due": "2017-02-19"
+  },
+  "undeliverable_registered_office_address": false,
+  "sic_codes": [
+    "25990"
+  ],
+  "registered_office_address": {
+    "address_line_1": "Millstone Works",
+    "address_line_2": "32 Atlas Way",
+    "locality": "Sheffield",
+    "postal_code": "S4 7QQ"
+  },
+  "jurisdiction": "england-wales",
+  "has_been_liquidated": false,
+  "company_number": "01710788",
+  "type": "ltd",
+  "date_of_creation": "1983-03-30",
+  "accounts": {
+    "next_due": "2016-12-31",
+    "next_made_up_to": "2016-03-31",
+    "last_accounts": {
+      "type": "group",
+      "made_up_to": "2015-03-31"
+    },
+    "overdue": false,
+    "accounting_reference_date": {
+      "day": "31",
+      "month": "03"
+    }
+  },
+  "last_full_members_list_date": "2016-01-22",
+  "company_name": "X-CEL SUPERTURN (GB) LIMITED",
+  "etag": "0e2eb68f61ea898e8f2eb17534e2ba41a1cc9a79",
+  "has_insolvency_history": false,
+  "company_status": "active",
+  "has_charges": true,
+  "previous_company_names": [
+    {
+      "name": "SHEFFIELD SUPERTURN LIMITED",
+      "ceased_on": "2007-10-22",
+      "effective_from": "1990-08-15"
+    },
+    {
+      "ceased_on": "1990-08-15",
+      "effective_from": "1983-03-30",
+      "name": "NORTH DERBYSHIRE PRECISION ENGINEERING LIMITED"
+    }
+  ],
+  "can_file": true
+}
