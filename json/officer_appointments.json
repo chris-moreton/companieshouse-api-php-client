@@ -1,0 +1,42 @@
+{
+  "start_index": 0,
+  "is_corporate_officer": false,
+  "total_results": 1,
+  "kind": "personal-appointment",
+  "name": "Leanne FURNISS-PLANT",
+  "etag": "1fa7e6f6a09536679e00fec565698487d4ba7dce",
+  "items": [
+    {
+      "former_names": [
+        {
+          "surname": "FURNISS"
+        }
+      ],
+      "name": "Leanne FURNISS-PLANT",
+      "appointed_to": {
+        "company_status": "active",
+        "company_name": "X-CEL SUPERTURN (GB) LIMITED",
+        "company_number": "01710788"
+      },
+      "appointed_on": "2014-05-01",
+      "name_elements": {
+        "surname": "FURNISS-PLANT",
+        "forename": "Leanne"
+      },
+      "links": {
+        "company": "/company/01710788"
+      },
+      "address": {
+        "address_line_1": "Millstone Works",
+        "postal_code": "S4 7QQ",
+        "locality": "Sheffield",
+        "address_line_2": "32 Atlas Way"
+      },
+      "officer_role": "secretary"
+    }
+  ],
+  "items_per_page": 35,
+  "links": {
+    "self": "/officers/kO1PpVWA8xapAolbsHsm-krhu0k/appointments"
+  }
+}
