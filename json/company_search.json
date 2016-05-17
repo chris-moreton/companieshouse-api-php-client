@@ -1,0 +1,572 @@
+{
+  "start_index": 0,
+  "page_number": 1,
+  "total_results": 15609,
+  "kind": "search#companies",
+  "items": [
+    {
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/04914325"
+      },
+      "date_of_creation": "2003-09-29",
+      "title": "NET LTD",
+      "company_number": "04914325",
+      "company_status": "active",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "Www.Buy-This-Company-Name.Com, Suite B, 29 Harley Street, London, W1G 9QR",
+      "address": {
+        "address_line_1": "Www.Buy-This-Company-Name.Com",
+        "address_line_2": "Suite B,  29 Harley Street",
+        "locality": "London",
+        "postal_code": "W1G 9QR"
+      },
+      "kind": "searchresults#company",
+      "description": "04914325 - Incorporated on 29 September 2003",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "address": {
+        "address_line_1": "4 LAMPTON COURT",
+        "locality": "HOUNSLOW",
+        "postal_code": "TW3 4EU",
+        "address_line_2": "LAMPTON ROAD"
+      },
+      "kind": "searchresults#company",
+      "company_status": "active",
+      "snippet": "4 Lampton Court, Lampton Road, Hounslow, TW3 4EU",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "description": "09265268 - Incorporated on 15 October 2014",
+      "matches": {
+        "title": [
+          1,
+          3,
+          7,
+          9
+        ]
+      },
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/09265268"
+      },
+      "date_of_creation": "2014-10-15",
+      "company_number": "09265268",
+      "title": "NET 2 NET UK LTD"
+    },
+    {
+      "date_of_creation": "2012-11-06",
+      "links": {
+        "self": "/company/08282146"
+      },
+      "company_type": "ltd",
+      "company_number": "08282146",
+      "title": "NET 2 NET (UK) LIMITED",
+      "kind": "searchresults#company",
+      "address": {
+        "address_line_1": "5",
+        "postal_code": "BL9 9BP",
+        "locality": "MANCHESTER",
+        "address_line_2": "BRIERLEY STREET"
+      },
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "5, Brierley Street, Manchester, BL9 9BP",
+      "company_status": "active",
+      "matches": {
+        "title": [
+          1,
+          3,
+          7,
+          9
+        ]
+      },
+      "description": "08282146 - Incorporated on  6 November 2012"
+    },
+    {
+      "snippet": "Branch Registration",
+      "description_identifier": [
+        "registered-on"
+      ],
+      "company_status": "active",
+      "kind": "searchresults#company",
+      "address": {
+        "address_line_1": "BRANCH REGISTRATION"
+      },
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "FC031264 - Registered on  2 January 2013",
+      "date_of_creation": "2013-01-02",
+      "company_type": "oversea-company",
+      "links": {
+        "self": "/company/FC031264"
+      },
+      "company_number": "FC031264",
+      "title": "NET EXPAT"
+    },
+    {
+      "address": {
+        "address_line_1": "ATHENE HOUSE",
+        "region": "LONDON",
+        "locality": "MILL HILL",
+        "postal_code": "NW7 3TB"
+      },
+      "kind": "searchresults#company",
+      "company_status": "active",
+      "description_identifier": [
+        "registered-on"
+      ],
+      "snippet": "Athene House, Mill Hill, London, NW7 3TB",
+      "description": "LP007406 - Registered on 12 February 2001",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "links": {
+        "self": "/company/LP007406"
+      },
+      "company_type": "limited-partnership",
+      "date_of_creation": "2001-02-12",
+      "company_number": "LP007406",
+      "title": "NET CONTROL"
+    },
+    {
+      "kind": "searchresults#company",
+      "address": {
+        "postal_code": "IG1 4JA",
+        "address_line_1": "230 BALFOUR ROAD"
+      },
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "snippet": "230 Balfour Road, IG1 4JA",
+      "company_status": "dissolved",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "05967848 - Dissolved on  2 June 2015",
+      "date_of_creation": "2006-10-16",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/05967848"
+      },
+      "company_number": "05967848",
+      "date_of_cessation": "2015-06-02",
+      "title": "NET IT LTD"
+    },
+    {
+      "title": "NET SKY LTD",
+      "date_of_cessation": "2015-07-07",
+      "company_number": "08787014",
+      "date_of_creation": "2013-11-22",
+      "links": {
+        "self": "/company/08787014"
+      },
+      "company_type": "ltd",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "08787014 - Dissolved on  7 July 2015",
+      "kind": "searchresults#company",
+      "address": {
+        "locality": "FINCHLEY",
+        "postal_code": "N12 0DR",
+        "region": "LONDON",
+        "address_line_2": "FLOOR",
+        "address_line_1": "1ST"
+      },
+      "snippet": "1st, Floor, Finchley, London, N12 0DR",
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "company_status": "dissolved"
+    },
+    {
+      "description": "09212384 - Dissolved on 23 February 2016",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "address": {
+        "postal_code": "M1 2JQ",
+        "locality": "Manchester",
+        "address_line_1": "83 Ducie Street"
+      },
+      "kind": "searchresults#company",
+      "company_status": "dissolved",
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "snippet": "83 Ducie Street, Manchester, M1 2JQ",
+      "date_of_cessation": "2016-02-23",
+      "company_number": "09212384",
+      "title": "NET SIX LTD",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/09212384"
+      },
+      "date_of_creation": "2014-09-10"
+    },
+    {
+      "kind": "searchresults#company",
+      "address": {
+        "postal_code": "SE2 0UP",
+        "locality": "London",
+        "address_line_1": "114 Howarth Road"
+      },
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "snippet": "114 Howarth Road, London, SE2 0UP",
+      "company_status": "dissolved",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "08818032 - Dissolved on 29 March 2016",
+      "date_of_creation": "2013-12-17",
+      "links": {
+        "self": "/company/08818032"
+      },
+      "company_type": "ltd",
+      "title": "NET RAP LTD",
+      "date_of_cessation": "2016-03-29",
+      "company_number": "08818032"
+    },
+    {
+      "date_of_creation": "1995-12-22",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/03140728"
+      },
+      "company_number": "03140728",
+      "title": "NET PEX LTD",
+      "kind": "searchresults#company",
+      "address": {
+        "address_line_1": "115 Craven Park Road",
+        "postal_code": "N15 6BL",
+        "address_line_2": "London"
+      },
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "115 Craven Park Road, London, N15 6BL",
+      "company_status": "active",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "03140728 - Incorporated on 22 December 1995"
+    },
+    {
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "05159261 - Incorporated on 21 June 2004",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "35 High Street, Margate, Kent, CT9 1DX",
+      "company_status": "active",
+      "kind": "searchresults#company",
+      "address": {
+        "region": "Kent",
+        "locality": "Margate",
+        "postal_code": "CT9 1DX",
+        "address_line_1": "35 High Street"
+      },
+      "company_number": "05159261",
+      "title": "NET PAY LTD",
+      "date_of_creation": "2004-06-21",
+      "links": {
+        "self": "/company/05159261"
+      },
+      "company_type": "ltd"
+    },
+    {
+      "kind": "searchresults#company",
+      "address": {
+        "address_line_1": "Office 3 Unit R Penfold Works",
+        "address_line_2": "Imperial Way",
+        "locality": "Watford",
+        "postal_code": "WD24 4YY"
+      },
+      "snippet": "Office 3 Unit R Penfold Works, Imperial Way, Watford, WD24 4YY",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "company_status": "active",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "08282022 - Incorporated on  6 November 2012",
+      "date_of_creation": "2012-11-06",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/08282022"
+      },
+      "title": "NET BIZ LTD",
+      "company_number": "08282022"
+    },
+    {
+      "date_of_cessation": "2014-12-30",
+      "company_number": "08537166",
+      "title": "NET TEST LTD",
+      "links": {
+        "self": "/company/08537166"
+      },
+      "company_type": "ltd",
+      "date_of_creation": "2013-05-20",
+      "description": "08537166 - Dissolved on 30 December 2014",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "address": {
+        "postal_code": "EC1V 4PW",
+        "locality": "LONDON",
+        "address_line_2": "ST JOHN STREET",
+        "address_line_1": "145-157"
+      },
+      "kind": "searchresults#company",
+      "company_status": "dissolved",
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "snippet": "145-157, St John Street, London, EC1V 4PW"
+    },
+    {
+      "description": "08097510 - Dissolved on  5 April 2016",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "company_status": "dissolved",
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "snippet": "145-157 St John Street, London, EC1V 4PW",
+      "address": {
+        "locality": "London",
+        "postal_code": "EC1V 4PW",
+        "address_line_1": "145-157 St John Street"
+      },
+      "kind": "searchresults#company",
+      "date_of_cessation": "2016-04-05",
+      "company_number": "08097510",
+      "title": "NET 4YOU LTD",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/08097510"
+      },
+      "date_of_creation": "2012-06-08"
+    },
+    {
+      "date_of_creation": "2013-07-30",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/08629842"
+      },
+      "title": "NET KART LTD",
+      "date_of_cessation": "2016-03-08",
+      "company_number": "08629842",
+      "kind": "searchresults#company",
+      "address": {
+        "postal_code": "EC1V 4PW",
+        "locality": "London",
+        "address_line_1": "145-157 St John Street"
+      },
+      "description_identifier": [
+        "dissolved-on"
+      ],
+      "snippet": "145-157 St John Street, London, EC1V 4PW",
+      "company_status": "dissolved",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "08629842 - Dissolved on  8 March 2016"
+    },
+    {
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "09631691 - Incorporated on 10 June 2015",
+      "kind": "searchresults#company",
+      "address": {
+        "address_line_2": "67-68 HATTON GARDEN",
+        "locality": "LONDON",
+        "postal_code": "EC1N 8JY",
+        "address_line_1": "OFFICE 34"
+      },
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "Office 34, 67-68 Hatton Garden, London, EC1N 8JY",
+      "company_status": "active",
+      "company_number": "09631691",
+      "title": "NET PEAR LTD",
+      "date_of_creation": "2015-06-10",
+      "links": {
+        "self": "/company/09631691"
+      },
+      "company_type": "ltd"
+    },
+    {
+      "company_status": "active",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "International House, 24 Holborn Viaduct, London, EC1A 2BN",
+      "address": {
+        "address_line_1": "INTERNATIONAL HOUSE",
+        "postal_code": "EC1A 2BN",
+        "locality": "LONDON",
+        "address_line_2": "24 HOLBORN VIADUCT"
+      },
+      "kind": "searchresults#company",
+      "description": "09815242 - Incorporated on  8 October 2015",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "links": {
+        "self": "/company/09815242"
+      },
+      "company_type": "ltd",
+      "date_of_creation": "2015-10-08",
+      "company_number": "09815242",
+      "title": "NET WASH LTD"
+    },
+    {
+      "date_of_creation": "2006-03-23",
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/05753030"
+      },
+      "title": "NET LOSS LTD",
+      "company_number": "05753030",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "Office 2, Tweed House, Park Lane, Swanley, Kent, BR8 8DT",
+      "company_status": "active",
+      "kind": "searchresults#company",
+      "address": {
+        "address_line_1": "Office 2, Tweed House",
+        "postal_code": "BR8 8DT",
+        "locality": "Swanley",
+        "address_line_2": "Park Lane",
+        "region": "Kent"
+      },
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "description": "05753030 - Incorporated on 23 March 2006"
+    },
+    {
+      "company_status": "active",
+      "snippet": "Brayton Cottage Old Pool Bank, Pool In Wharfedale, Otley, West Yorkshire, LS21 1EJ",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "address": {
+        "address_line_2": "Pool In Wharfedale",
+        "region": "West Yorkshire",
+        "postal_code": "LS21 1EJ",
+        "locality": "Otley",
+        "address_line_1": "Brayton Cottage Old Pool Bank"
+      },
+      "kind": "searchresults#company",
+      "description": "08136579 - Incorporated on 10 July 2012",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      },
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/08136579"
+      },
+      "date_of_creation": "2012-07-10",
+      "company_number": "08136579",
+      "title": "NET GOOP LTD"
+    },
+    {
+      "company_type": "ltd",
+      "links": {
+        "self": "/company/08565000"
+      },
+      "date_of_creation": "2013-06-11",
+      "title": "NET ARTS LTD",
+      "company_number": "08565000",
+      "address": {
+        "postal_code": "N1 7GU",
+        "locality": "London",
+        "address_line_1": "20-22 Wenlock Road"
+      },
+      "kind": "searchresults#company",
+      "company_status": "active",
+      "description_identifier": [
+        "incorporated-on"
+      ],
+      "snippet": "20-22 Wenlock Road, London, N1 7GU",
+      "description": "08565000 - Incorporated on 11 June 2013",
+      "matches": {
+        "title": [
+          1,
+          3
+        ]
+      }
+    }
+  ],
+  "items_per_page": 20
+}

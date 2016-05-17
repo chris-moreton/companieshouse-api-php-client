@@ -107,7 +107,7 @@ class Client
      * 
      * @param $companyNumber The company number of the officer list being requested
      * @param $itemsPerPage Optional. The number of officers to return per page
-     * @param $startIndex Optional. The offset into the entire result set that this page starts. Optional.
+     * @param $startIndex Optional. The offset into the entire result set that this page starts.
      * @param $orderBy
      *        Optional 
      *        The field by which to order the result set. Possible values are: appointed_on resigned_on surname.
@@ -136,6 +136,37 @@ class Client
         return $jsonDecode;
     }
     
+    /**
+     * Search for a company
+     * 
+     * https://developer.companieshouse.gov.uk/api/docs/search/companies/companysearch.html
+     * 
+     * @param $q The search term
+     * @param $itemsPerPage Optional. The number of officers to return per page
+     * @param $startIndex Optional. The offset into the entire result set that this page starts.
+     * 
+     * @return boolean|mixed
+     */
+    public function companySearch($q, $itemsPerPage = null, $startIndex = null)
+    {
+        $response = $this->client()->get($this->apiBaseUri . '/search/companies', [
+            'query' => [
+                'q' => $q,
+                'items_per_page' => $itemsPerPage,
+                'start_index' => $startIndex,
+            ],
+        ]);
+        
+        if( $response->getStatusCode() != 200 ){
+            return $this->log($response, false);
+        }
+        
+        $jsonDecode = json_decode($response->getBody());
+        
+        $this->log($response, true);
+        
+        return $jsonDecode;
+    }
     
     /**
      * @return the $isError

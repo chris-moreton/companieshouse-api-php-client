@@ -14,9 +14,11 @@ Usage
 
     $client = new Client($apiKey);
     $profile = $client->getCompanyProfile($companyNumber);
+    $profile->getCompanyProfile('06236637')->registered_office_address->address_line_1;
+    
     $officerList = $client->getOfficerList($companyNumber);
     
-    $profile->getCompanyProfile('06236637')->registered_office_address->address_line_1;
+    $companyList = $client->companySearch('netsen');
     
 A full list of available calls can be found by examining the ClientSpec.php file which contains the spec tests. The *json* directory contains examples of the data returned by the Companies House API.
 
