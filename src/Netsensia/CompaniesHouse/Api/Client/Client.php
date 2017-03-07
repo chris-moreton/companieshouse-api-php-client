@@ -1,7 +1,7 @@
 <?php
 namespace Netsensia\CompaniesHouse\Api\Client;
 
-use Netsensia\CompaniesHouse\Api\Client\Common\Guzzle\Client as GuzzleClient;
+use GuzzleHttp\Client as GuzzleClient;
 
 use GuzzleHttp\Psr7\Response ;
 
