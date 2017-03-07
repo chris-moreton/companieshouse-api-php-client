@@ -4,5 +4,6 @@
 .apiKey
 vendor/
 .idea/
+bin/
 
 
