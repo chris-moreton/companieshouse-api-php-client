@@ -10,25 +10,19 @@ use GuzzleHttp\Client as GuzzleClient;
  */
 class Client extends GuzzleClient {
 
-    public function __construct(array $config = []) {
+  public function __construct(array $config = []) {
+    parent::__construct($config);
+  }
 
-        parent::__construct( $config );
+  /**
+   * Sets the token as a default header value for the client.
+   *
+   * @param $apiKey
+   */
+  public function setApiKey($apiKey) {
 
-        $this->setDefaultOption( 'exceptions', false );
-        $this->setDefaultOption( 'allow_redirects', false );
-        
+    $this->setDefaultOption('auth', [$apiKey, '']);
 
-    }
-
-    /**
-     * Sets the token as a default header value for the client.
-     *
-     * @param $apiKey
-     */
-    public function setApiKey( $apiKey ) {
-
-        $this->setDefaultOption( 'auth', [$apiKey, ''] );
-
-    }
+  }
 
 } // class
